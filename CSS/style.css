@@ -314,43 +314,92 @@ a {
 /* ===========================
    PRÉSENTATION
 =========================== */
-.about-content {
+.about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 60px;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.about-text {
+    max-width: 620px;
+}
+
+.about-text .section-label {
+    margin-bottom: 18px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.about-text h2 {
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.05;
+    color: var(--dark);
 }
 
 .about-text p {
-    margin-bottom: 18px;
+    margin-bottom: 22px;
     color: var(--light-text);
-    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
-.text-link {
-    display: inline-block;
-    margin-top: 10px;
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
     color: var(--primary);
-    font-weight: bold;
+    border: 1px solid var(--primary);
+    border-radius: 999px;
+    background: transparent;
+    transition: 0.25s ease;
 }
 
-.text-link:hover {
-    text-decoration: underline;
+.btn-outline:hover {
+    background: rgba(17, 166, 67, 0.08);
 }
 
-.about-image {
-    min-height: 320px;
-}
-
-.image-placeholder {
-    height: 100%;
+.about-cards {
     display: grid;
-    place-items: center;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #47bb19, #1fdfa5);
-    color: var(--white);
-    font-size: 32px;
-    font-weight: bold;
+    gap: 20px;
+}
+
+.about-card {
+    padding: 24px 22px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(25, 80, 115, 0.08);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(16, 42, 67, 0.08);
+        transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+    }
+
+    .about-card:hover,
+    .about-card:focus-within,
+    .about-card.touch-active {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 70px rgba(16, 42, 67, 0.16);
+        border-color: rgba(17, 166, 67, 0.18);
+        background: rgba(255, 255, 255, 1);
+    }
+
+    .about-card-icon {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 16px;
+        border-radius: 16px;
+        background: rgba(17, 166, 67, 0.12);
+        font-size: 1.25rem;
+    }
+
+.about-card p {
+    margin: 0;
+    color: var(--light-text);
+    line-height: 1.7;
 }
 
 /* ===========================
@@ -814,9 +863,13 @@ a {
         margin-top: 25px;
     }
 
-    .about-content {
+    .about-grid {
         grid-template-columns: 1fr;
         gap: 35px;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
     }
 
     .theme-grid {
