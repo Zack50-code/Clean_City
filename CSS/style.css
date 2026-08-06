@@ -194,15 +194,14 @@ a {
     transform: translateY(-2px);
 }
 
-.btn-secondary {
-    color: var(--white);
-    border-color: var(--white);
-    background: transparent;
+.form-option-link {
+    color: var(--dark);
+    text-decoration: none;
 }
 
-.btn-secondary:hover {
+.form-option-link:hover {
     color: var(--primary);
-    background: var(--white);
+    text-decoration: underline;
 }
 
 .btn-outline {
