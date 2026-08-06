@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
         <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/bénévole.css">
 
 </head>
 <body>
@@ -28,7 +29,127 @@
             </nav>
         </div>
     </header>
-    
+
+
+    <main>
+        <section class="section registration-form-section">
+            <div class="registration-container">
+                <form class="registration-form" action="#" method="post">
+
+                    <div class="registration-hero">
+                        <h1>Devenir Bénévole — CLEAN CITY 2026</h1>
+                        <div class="registration-divider"></div>
+                        <p class="registration-subtitle">
+                            Porto-Novo, Bénin · Septembre 2026
+                        </p>
+                    </div>
+                    
+                    <div class="form-row form-row-full">
+                        <div class="form-group form-group-switch">
+                            <div class="form-switch">
+                                <a href="./inscription.html" class="form-option active" aria-label="Participant">
+                                    <span class="form-sticker">👤</span>
+                                    Participant
+                                </a>
+                                <a href="./bénévole.html" class="form-option" aria-label="Bénévole">
+                                    <span class="form-sticker">🤝</span>
+                                    Bénévole
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nom + Prénom -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="nom"
+                                placeholder="Votre nom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" name="prenom"
+                                placeholder="Votre prénom" required>
+                        </div>
+                    </div>
+
+                    <!-- Téléphone + Email -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telephone">Numéro de téléphone</label>
+                            <input type="tel" id="telephone" name="telephone"
+                                placeholder="+229 00 00 00 00" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email"
+                                placeholder="nom@exemple.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Âge + Ville -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Âge</label>
+                            <input type="number" id="age" name="age"
+                                min="16" max="99" placeholder="Ex : 22" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ville">Ville de résidence</label>
+                            <input type="text" id="ville" name="ville"
+                                placeholder="Porto-Novo" required>
+                        </div>
+                    </div>
+
+                    <!-- Disponibilité + Domaine -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="disponibilite">Disponibilité</label>
+                            <select id="disponibilite" name="disponibilite" required>
+                                <option value="">Choisissez une option</option>
+                                <option value="toute-la-duree">Toute la durée (21-27 sept.)</option>
+                                <option value="quelques-jours">Quelques jours</option>
+                                <option value="week-end">Week-end uniquement</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="domaine">Domaine souhaité</label>
+                            <select id="domaine" name="domaine" required>
+                                <option value="">Choisissez un domaine</option>
+                                <option value="salubrite">Salubrité & ramassage</option>
+                                <option value="sensibilisation">Sensibilisation</option>
+                                <option value="reboisement">Reboisement</option>
+                                <option value="logistique">Logistique</option>
+                                <option value="communication">Communication</option>
+                                <option value="accueil">Accueil & orientation</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Motivation (pleine largeur) -->
+                    <div class="form-row form-row-full">
+                        <div class="form-group">
+                            <label for="motivation">Pourquoi voulez-vous devenir bénévole ?</label>
+                            <textarea id="motivation" name="motivation" rows="4"
+                                placeholder="Parlez-nous de votre motivation..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Bouton -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            Devenir bénévole
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
 
 
 
