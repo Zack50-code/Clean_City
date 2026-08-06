@@ -373,28 +373,28 @@ a {
     border: 1px solid rgba(25, 80, 115, 0.08);
     border-radius: 24px;
     box-shadow: 0 20px 50px rgba(16, 42, 67, 0.08);
-        transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, background 0.28s ease;
-    }
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+}
 
-    .about-card:hover,
-    .about-card:focus-within,
-    .about-card.touch-active {
-        transform: translateY(-8px);
-        box-shadow: 0 30px 70px rgba(16, 42, 67, 0.16);
-        border-color: rgba(17, 166, 67, 0.18);
-        background: rgba(255, 255, 255, 1);
-    }
+.about-card:hover,
+.about-card:focus-within,
+.about-card.touch-active {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 70px rgba(16, 42, 67, 0.16);
+    border-color: rgba(17, 166, 67, 0.18);
+    background: rgba(255, 255, 255, 1);
+}
 
-    .about-card-icon {
-        width: 46px;
-        height: 46px;
-        display: grid;
-        place-items: center;
-        margin-bottom: 16px;
-        border-radius: 16px;
-        background: rgba(17, 166, 67, 0.12);
-        font-size: 1.25rem;
-    }
+.about-card-icon {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    background: rgba(17, 166, 67, 0.12);
+    font-size: 1.25rem;
+}
 
 .about-card p {
     margin: 0;
