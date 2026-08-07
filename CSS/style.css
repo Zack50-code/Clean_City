@@ -194,24 +194,30 @@ a {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
 }
 
+.btn:active {
+    transform: scale(0.97);
+}
+
 .btn-primary {
     color: var(--white);
     background: linear-gradient(135deg, var(--primary), #1f8f2f);
 }
 
-.btn-primary:hover {
-    background: linear-gradient(135deg, #1f8f2f, var(--primary));
+@media (hover: hover) and (pointer: fine) {
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #1f8f2f, var(--primary));
+    }
+
+    .btn-secondary:hover {
+        color: var(--white);
+        background: linear-gradient(135deg, var(--primary), #1f8f2f);
+    }
 }
 
 .btn-secondary {
     color: var(--primary);
     background: var(--white);
     border-color: rgba(0, 128, 0, 0.2);
-}
-
-.btn-secondary:hover {
-    color: var(--white);
-    background: linear-gradient(135deg, var(--primary), #1f8f2f);
 }
 
 .form-option-link {
@@ -665,8 +671,10 @@ a {
 .form-separator {
     width: 100%;
     height: 1px;
-    margin: 4px 0 8px;
-    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 6px 0 12px;
+    background: var(--primary);
+    border-radius: 999px;
+    opacity: 0.85;
 }
 
 .form-column {
@@ -713,16 +721,27 @@ a {
     font-size: 18px;
 }
 
-.form-option:hover {
+.form-option:active {
+    transform: scale(0.98);
+}
+
+.form-option {
     border-color: var(--primary);
-    background: rgba(17, 166, 67, 0.12);
-    transform: translateY(-1px);
+    background: rgba(17, 166, 67, 0.08);
+    color: var(--dark);
 }
 
 .form-option.active {
-    border-color: var(--primary);
     background: rgba(17, 166, 67, 0.16);
 }
+
+.form-option:hover {
+    border-color: var(--primary);
+    background: rgba(17, 166, 67, 0.24);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 18px rgba(17, 166, 67, 0.18);
+}
+
 
 @media (max-width: 600px) {
     .form-switch {
