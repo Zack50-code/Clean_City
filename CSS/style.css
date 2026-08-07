@@ -166,7 +166,8 @@ a {
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    justify-content: center;
+    gap: 16px;
     margin-top: 35px;
 }
 
@@ -174,24 +175,43 @@ a {
    BOUTONS
 =========================== */
 .btn {
-    display: inline-block;
-    padding: 14px 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
     border: 2px solid transparent;
-    border-radius: 7px;
+    border-radius: 10px;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
+    letter-spacing: 0.3px;
     transition: 0.25s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
 }
 
 .btn-primary {
     color: var(--white);
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), #1f8f2f);
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #1f8f2f, var(--primary));
+}
+
+.btn-secondary {
+    color: var(--primary);
+    background: var(--white);
+    border-color: rgba(0, 128, 0, 0.2);
+}
+
+.btn-secondary:hover {
+    color: var(--white);
+    background: linear-gradient(135deg, var(--primary), #1f8f2f);
 }
 
 .form-option-link {
@@ -1006,4 +1026,3 @@ a {
         padding: 12px;
     }
 }
- 
